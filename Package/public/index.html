@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Профиль - Профессиональное портфолио</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Профиль</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#experience" class="nav-link">Опыт</a>
+                <a href="#skills" class="nav-link">Навыки</a>
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+                <button id="editBtn" class="btn btn-secondary">
+                    <i class="fas fa-edit"></i> Редактировать
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="hello-text">Привет, мир!</span><br>
+                        Меня зовут <span id="heroName" class="name-highlight">Мақсұт Ералхан</span>
+                    </h1>
+                    <p class="hero-subtitle" id="heroBio">
+                        Занимается версткой сайта, а также Java разработчик. Создаю веб-приложения и небольшие проекты.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Связаться
+                        </a>
+                        <a href="/api/resume/pdf" class="btn btn-outline" target="_blank">
+                            <i class="fas fa-download"></i> Скачать резюме
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <img id="profilePhoto" src="https://via.placeholder.com/300x300?text=Фото" alt="Фото профиля" class="profile-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-camera"></i>
+                            <span>Нажмите для изменения фото</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="aboutBio">
+                        Занимаюсь версткой сайтов и разработкой на Java. Также увлекаюсь художественным творчеством и созданием контента. 
+                        Моя цель - создавать качественные и красивые веб-приложения и проекты.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span id="contactEmail">yeralkhan@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="contactPhone">8 777 199 9922</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="contactLocation">Казахстан</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" id="githubLink" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" id="linkedinLink" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" id="websiteLink" class="social-link" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Опыт работы</h2>
+            <div class="timeline" id="experienceTimeline">
+                <!-- Experience items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Навыки</h2>
+            <div class="skills-content">
+                <div class="skills-overview">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Веб-разработка</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Программирование</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Креативность</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-percentage="95"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Проекты</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="web">Веб-разработка</button>
+                <button class="filter-btn" data-filter="mobile">Мобильные</button>
+                <button class="filter-btn" data-filter="desktop">Десктоп</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here -->
+            </div>
+            
+            <!-- GitHub Repositories -->
+            <div class="github-section">
+                <h3>Репозитории GitHub</h3>
+                <div class="github-repos" id="githubRepos">
+                    <!-- GitHub repos will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-content">
+                <div class="contact-info-section">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p id="contactEmailSection">yeralkhan@example.com</p>
+                        <a href="mailto:yeralkhan@example.com" class="contact-link">Написать письмо</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Телефон</h3>
+                        <p>8 777 199 9922</p>
+                        <a href="tel:87771999922" class="contact-link">Позвонить</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p id="githubUsernameSection">Yeralkhan06</p>
+                        <a href="https://github.com/Yeralkhan06" id="githubProfileLink" class="contact-link" target="_blank">Посмотреть профиль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Личный профиль. Создано с ❤️</p>
+                <a href="#home" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                    Наверх
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Редактировать профиль</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="firstName">Имя *</label>
+                        <input type="text" id="firstName" name="first_name" value="Мақсұт" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Фамилия *</label>
+                        <input type="text" id="lastName" name="last_name" value="Ералхан" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Отчество</label>
+                        <input type="text" id="middleName" name="middle_name" value="Дарханұлы">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" value="yeralkhan@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" value="8 777 199 9922">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Местоположение</label>
+                        <input type="text" id="location" name="location" value="Казахстан">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">О себе</label>
+                        <textarea id="bio" name="bio" rows="3">Занимается версткой сайта, а также Java разработчик. Создаю веб-приложения и небольшие проекты.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="githubUsername">GitHub username</label>
+                        <input type="text" id="githubUsername" name="github_username" value="Yeralkhan06">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedinUrl">LinkedIn URL</label>
+                        <input type="url" id="linkedinUrl" name="linkedin_url">
+                    </div>
+                    <div class="form-group">
+                        <label for="websiteUrl">Личный сайт</label>
+                        <input type="url" id="websiteUrl" name="website_url">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEdit">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
